@@ -1,0 +1,9 @@
+ name: add server name and ip address in /etc/hosts file
+ lineinfile: dest=/etc/hosts line="{{ item }}"
+ with_items:
+    - "ww1.xx1.yy1.zz1 hostname1"
+    - "ww2.xx2.yy2.zz2 hostname2"
+    - "ww3.xx3.yy3.zz3 hostname3"
+- "ww4.xx4.yy4.zz4 hostname4"                                               
+
+I want it to come in the order                                                          
