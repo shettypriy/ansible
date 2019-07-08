@@ -1,0 +1,12 @@
+- name: updating the known host key
+  blockinfile:
+     path: /home/ec2-user/sdf_known_hosts/tasks/main.yml
+     marker: ""
+     block: |3
+            - "{{ new_server_ip }} {{ server_name }} {{ server_key }}
+     backup: yes
+- name: Remove blank lines blockinfile put in
+  lineinfile:
+     path: /home/ec2-user/sdf_known_hosts/tasks/main.yml
+     state: absent
+     regexp: '^$'
