@@ -1,5 +1,5 @@
 - name: adding IP to faile2ban
   lineinfile:
-        path: /home/ec2-user/fail2ban/sdf.conf
+        path: /home/ec2-user/test.conf
         line: "{{ new_server_ip }}"
-        insertafter: "^#?ignoreip"
+        insertafter: "^#?ip_list"
