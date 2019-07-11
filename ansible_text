@@ -1,0 +1,37 @@
+`I want to insert/add a line after searching a particular string or text
+
+input:
+header 1
+      text1
+      text2
+
+header 2
+      text4
+      text5
+
+ 
+Expected output
+header 1
+      text1
+      text2
+      text3 
+
+header 2
+      text4
+      text5
+
+ I have tried with ansible lineinfile, blockinfile, replace,regexp. I was able to add the required text but it is adding at the end of the file as shown below
+
+header 1
+      text1
+      text2
+      
+
+header 2
+      text4
+      text5
+ 
+      text3
+
+I want it to be added exactly under header1 and after text2`
+
